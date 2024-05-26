@@ -1,8 +1,8 @@
 {
   "name": "tracker",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "Tracker Project / Base",
+  "productName": "Tracker App",
   "author": "LuismGil <luism6977@gmail.com>",
   "private": true,
   "scripts": {
