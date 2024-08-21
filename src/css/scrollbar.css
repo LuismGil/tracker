@@ -1,0 +1,30 @@
+::-webkit-scrollbar {
+  width: 12px;
+  height: 15px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  box-shadow: unset;
+  &:hover {
+    background: #fff;
+  }
+}
+::-webkit-scrollbar-track-piece {
+  background: 0 0;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(19 54 91);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 10px;
+  &:hover {
+    background-color: rgb(19 54 91);
+  }
+  &:window-inactive {
+    background-color: rgb(19 54 91);
+  }
+}
+.q-scrollarea-thumb {
+  width: 4px;
+  border-radius: 4px;
+}

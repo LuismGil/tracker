@@ -1,23 +1,20 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated> /* header */ </q-header>
-
+    <q-header elevated>
+      {{ title }}
+    </q-header>
     <q-page-container>
       <router-view />
     </q-page-container>
+    <q-footer>
+      <footer-tracker />
+    </q-footer>
   </q-layout>
 </template>
 
-<script>
-import { defineComponent, ref } from "vue";
+<script setup lang="ts">
+import footerTracker from 'src/components/footerTracker.vue'
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: "MainLayout",
-
-  components: {},
-
-  setup() {
-    return {};
-  },
-});
+const title = ref<string>('hola')
 </script>
