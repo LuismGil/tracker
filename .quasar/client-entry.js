@@ -155,7 +155,9 @@ createQuasarApp(createApp, quasarUserOptions)
       
       import(/* webpackMode: "eager" */ 'boot/i18n'),
       
-      import(/* webpackMode: "eager" */ 'boot/typescript')
+      import(/* webpackMode: "eager" */ 'boot/typescript'),
+      
+      import(/* webpackMode: "eager" */ 'boot/fontawesome')
       
     ]).then(bootFiles => {
       const boot = mapFn(bootFiles).filter(entry => typeof entry === 'function')

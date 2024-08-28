@@ -38,7 +38,7 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: ["i18n", "typescript"],
+    boot: ["i18n", "typescript", "fontawesome"],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: ["app.scss", "tailwind.css"],
@@ -105,6 +105,7 @@ module.exports = configure(function (/* ctx */) {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
     framework: {
+      iconSet: 'fontawesome-v6',
       config: {},
       directives: ["ClosePopup"],
       // Quasar plugins

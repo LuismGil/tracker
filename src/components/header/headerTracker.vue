@@ -1,51 +1,52 @@
 <template>
-    <nav class="bg-black text-white w-[100%] px-[20px] md:px-[65px]">
-      <div class="relative flex h-20 items-center">
-        <div class="absolute right-0 flex items-center gap-5">
-          <q-btn
-            v-for="(button, index) in buttons"
-            :key="index"
-            :icon="button.icon"
-            :disabled="disabled"
-            flat
-            round
-            @click="button?.click"
-            :style="{ color: button.iconColor }"
-          >
-          {{ button }}
-            <tooltip v-if="button.tooltip" :content="button.tooltip" />
-          </q-btn>
-        </div>
+  <nav>
+    <div>
+      <div>
+        <q-btn
+          v-for="(button, index) in buttons"
+          :key="index"
+          :disabled="disabled"
+          flat
+          round
+          @click="button.click"
+          :style="{ color: button.iconColor }"
+        >
+          <q-icon
+            :name="button.icon"
+          />
+          <Tooltip v-if="button.tooltip" :content="button.tooltip" />
+        </q-btn>
       </div>
-    </nav>
-  </template>
+    </div>
+  </nav>
+</template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import HeaderProps from 'src/components/header/model/HeaderProps'
 import Tooltip from 'src/components/Tooltip/Tooltip.vue'
 
 const props = defineProps<HeaderProps>()
-const buttons = [
+const buttons = ref([
   {
-    icon: 'mail',
+    icon: 'fa-solid fa-bell',
     click: () => {
-      alert('sadsa')
+      alert('Bell clicked')
     },
-    iconColor: 'asdfs',
-    tooltip: 'asdfs'
+    iconColor: '#333',
+    tooltip: 'Bell notification'
   },
   {
     icon: 'mail',
     click: () => {
-      alert('asdfsd')
+      alert('Mail clicked')
     },
-    iconColor: 'asdfs',
-    tooltip: 'asdfs'
+    iconColor: '#555',
+    tooltip: 'Send mail'
   }
-]
-
+])
 </script>
 
 <style scoped lang="scss">
-
+/* Estilos personalizados si es necesario */
 </style>
