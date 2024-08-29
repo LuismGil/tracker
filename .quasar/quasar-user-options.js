@@ -10,13 +10,11 @@
  * Boot files are your "main.js"
  **/
 
-import iconSet from 'quasar/icon-set/fontawesome-v6.js'
-
 
 
 import {ClosePopup,Loading} from 'quasar'
 
 
 
-export default { config: {},iconSet,directives: {ClosePopup},plugins: {Loading} }
+export default { config: {"dark":"auto"},directives: {ClosePopup},plugins: {Loading} }
 

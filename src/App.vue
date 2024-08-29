@@ -3,9 +3,18 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, watch } from 'vue'
+import { Dark } from 'quasar'
 
 export default defineComponent({
-  name: "App",
-});
+  name: 'App',
+  setup() {
+    const userPrefersDark = localStorage.getItem('theme') === 'dark'
+    Dark.set(userPrefersDark)
+
+    watch(() => Dark.isActive, (isDark) => {
+      localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    })
+  }
+})
 </script>
